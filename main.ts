@@ -221,6 +221,7 @@ export default class HiddenCommentsPlugin extends Plugin {
 	}
 
 	createHiddenFile(view: MarkdownView, contents: string): string {
+		let identifier = 0;
 		const files = this.app.vault.getMarkdownFiles().map((x) => x.name);
 		for (let incr = 1; incr < 1000; incr++) {
 			const commentFileName =
@@ -229,12 +230,13 @@ export default class HiddenCommentsPlugin extends Plugin {
 				"-" +
 				view.file.name;
 			if (!files.includes(commentFileName)) {
+				identifier = incr;
 				break;
 			}
 		}
 		const commentFileName =
 			this.settings.commentFilePrefix +
-			incr.toString() +
+			identifier.toString() +
 			"-" +
 			view.file.name;
 		const fullPath = normalizePath(
