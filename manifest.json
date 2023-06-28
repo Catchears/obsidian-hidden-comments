@@ -3,7 +3,7 @@
 	"name": "Hidden Comments",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Show or hide parts of your notes.",
+	"description": "Create comments in your notes that you can hide when needed.",
 	"author": "Catchears",
 	"authorUrl": "https://github.com/Catchears",
 	"isDesktopOnly": false

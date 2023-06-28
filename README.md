@@ -4,7 +4,7 @@ Simple plugin to create hidden comments in your [obsidian.md](https://obsidian.m
 
 ## Fair Disclaimer
 
-This is my first time working with TypeScript (or JavaScript) - this won't be perfect.
+This is my first time working with TypeScript (or JavaScript) - this was a learn-as-you-go-along project and won't be perfect.
 
 The plugin cannot delete files, but will rename the folder with the name given in the plugin settings to show / hide the files.
 
