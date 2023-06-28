@@ -1,6 +1,6 @@
 {
 	"name": "hidden-comments",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "This is an Obsidian.md plugin to show or hide parts of notes.",
 	"main": "main.js",
 	"scripts": {
