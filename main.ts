@@ -253,7 +253,7 @@ export default class HiddenCommentsPlugin extends Plugin {
 
 	async onunload() {
 		// @ts-expect-error: private the attribute exists, just isn't documented
-		await app.plugins.unloadPlugin(this.manifest.id);
+		await this.app.plugins.unloadPlugin(this.manifest.id);
 		if (this.settings.showOnQuit) {
 			const hiddenFolderExists = await this.folderExists(
 				"." + this.settings.hiddenFolderName
@@ -374,8 +374,6 @@ class HiddenCommentsSettingsTab extends PluginSettingTab {
 		const { containerEl } = this;
 
 		containerEl.empty();
-
-		containerEl.createEl("h2", { text: "Hidden Comments Settings" });
 
 		new Setting(containerEl)
 			.setName("Show Comments")
