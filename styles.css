@@ -1,8 +1,8 @@
-/*
+.hide-embed-title .markdown-embed-title,
+.hide-embed-title h1{
+	display: none; 
+}
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
-
-If your plugin does not need CSS, delete this file.
-
-*/
+.hide-embed-title .internal-embed.is-loaded.file-embed.mod-empty{
+    display: none;
+}
