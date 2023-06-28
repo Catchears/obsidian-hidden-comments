@@ -91,15 +91,14 @@ export default class HiddenCommentsPlugin extends Plugin {
 					editor.replaceSelection(
 						"![[" + commentFileName + "#Comments]]"
 					);
-
 					if (this.settings.setCssClass) {
-						async () => {
+						(async () => {
 							try {
 								await this.addFrontmatterCssClass(view, editor);
 							} catch (error) {
 								new Notice("Couldn't set cssclass!");
 							}
-						};
+						})();
 					}
 				}
 			},
@@ -108,7 +107,7 @@ export default class HiddenCommentsPlugin extends Plugin {
 		this.addCommand({
 			id: "create-hidden-comment",
 			name: "Create New Hidden Comment",
-			editorCheckCallback: async (
+			editorCheckCallback: (
 				checking: boolean,
 				editor: Editor,
 				view: MarkdownView
@@ -137,7 +136,13 @@ export default class HiddenCommentsPlugin extends Plugin {
 					editor.setCursor(newCursor);
 
 					if (this.settings.setCssClass) {
-						await this.addFrontmatterCssClass(view, editor);
+						(async () => {
+							try {
+								await this.addFrontmatterCssClass(view, editor);
+							} catch (error) {
+								new Notice("Couldn't set cssclass!");
+							}
+						})();
 					}
 				}
 			},
