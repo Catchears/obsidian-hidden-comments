@@ -10,7 +10,15 @@ The plugin cannot delete files, but will rename the folder with the name given i
 
 ## Installation
 
-Simply clone the repository to your plugins directory.
+### BRAT
+
+The easiest way to install is by using the [BRAT Plugin](https://github.com/TfTHacker/obsidian42-brat), which can be installed from the plugin browser. This will also take care of updates.
+
+To do so, install BRAT from the plguin browser, enable it, then navigate to Options > Beta Plugin List > Add Beta Plugin. You'll be prompted for a link, enter the URL to this page (`https://github.com/Catchears/obsidian-hidden-comments`).
+
+### Manually
+
+Alternatively, navigate to `vault_root/.obsidian/plugins` and create a folder called `obsidian-hidden-comments`. In that folder, place the `main.js`, `manifest.json` and `styles.css` files you can find under the latest release on the [releases page](https://github.com/Catchears/obsidian-hidden-comments/releases).
 
 ## Usage
 
